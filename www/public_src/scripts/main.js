@@ -1,4 +1,4 @@
-angular.module('wwwApp', ['ngRoute'])
+angular.module('enigma', ['ngRoute'])
     .config(function($routeProvider) {
         $routeProvider
             .when('/', {

@@ -1,6 +1,6 @@
 ## Enigma Machine Cipher ##
 
-This project is a website that will do basic encryptions based on the WWII Nazi Enigma Machine.
+This project is a website that will compute basic encryptions based on the WWII Nazi Enigma Machine.
 
 The website is an AngularJS-NodeJS-Express server.
 

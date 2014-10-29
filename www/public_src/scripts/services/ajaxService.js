@@ -1,4 +1,4 @@
-angular.module('wwwApp')
+angular.module('enigma')
     .service('ajaxService', function($http) {
 
             return {
