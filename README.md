@@ -1,10 +1,14 @@
-## STARTER NODE/EXPRESS/ANGULAR WEBAPP ##
+## Enigma Machine Cipher ##
+
+This project is a website that will do basic encryptions based on the WWII Nazi Enigma Machine.
+
+The website is an AngularJS-NodeJS-Express server.
 
 ### System Configs ###
 
 **Created and Tested With:**
 
-* Mac OSX 10.9.2
+* Mac OSX 10.10
 * Virtualbox 4.3.8 r92456
 * Vagrant 1.4.3
 * Grunt v0.1.13
@@ -80,10 +84,4 @@ The node Express server will run as a daemon script, and will restart after rebo
 It is kept running using Monit, which will keep it running through errors and problems (see nodeservermonit.conf for more info)
 
 ###Credits:###
-* Originally based off of [John Longanecker's Angular Skeleton](https://github.com/jlongnbt/angular-skeleton "jlongnbt repo")
-* Monit and Upstart setup based off of the tutorial [HERE](http://howtonode.org/deploying-node-upstart-monit)
-
-## @TODO: ##
-
-* add a Monit Cronjob to run periodically, to make sure Monit stays running
-* add some way to restart the server automatically when server files are changed
+* Original server built by [Nathanael Marquardt](https://github.com/NathanMarq/angular-node-server).
