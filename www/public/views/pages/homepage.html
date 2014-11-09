@@ -2,16 +2,17 @@
     <div id="header"></div>
     <div id="content">
         <div class="column full center">
-            <div class="innerBox" style="background-color: {{titleBGColor}};">
+            <div class="innerBox" id="topBox">
               <h3>The Enigma Machine</h3>
             </div>
         </div>
         <div class="column full center">
             <form ng-submit="encrypt()">
                 <input type="text" ng-model="phrase" id="input"/>
-                <input type="submit" id="submit" value="Submit" ng-click="show=true"/>
+                <input type="submit" id="submit" value="Encrypt" ng-click="show=true"/>
                 <pre ng-show="show">{{result}}</pre>
             </form>
+            <p>{{third}} {{second}} {{first}}<p>
         </div>
     </div>
     <div id="footer"></div>
