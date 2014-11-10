@@ -36,8 +36,8 @@ angular.module('enigma')
                     console.log('second switch: ' + letter);
                     letter = switchLetter(letter, rotorThree);
                     console.log('third switch: ' + letter);
-                    letter = reflector(letter);
-                    console.log('reflector: ' + letter);
+                    // letter = reflector(letter);
+                    // console.log('reflector: ' + letter);
                     // letter = switchLetter(letter, rotorThree);
                     // console.log('fifth switch: ' + letter);
                     // letter = switchLetter(letter, rotorTwo);

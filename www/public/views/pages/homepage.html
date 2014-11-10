@@ -10,9 +10,15 @@
             <form ng-submit="encrypt()">
                 <input type="text" ng-model="phrase" id="input"/>
                 <input type="submit" id="submit" value="Encrypt" ng-click="show=true"/>
-                <pre ng-show="show">{{result}}</pre>
+                <div id="encryption">
+                  <pre ng-show="show">{{result}}</pre>
+                </div>
             </form>
-            <p>{{third}} {{second}} {{first}}<p>
+            <!-- <p>{{third}} {{second}} {{first}}<p> -->
+            <label><input class="rotorInput" ng-model="third"/></label>
+            <label><input class="rotorInput" ng-model="second"/></label>
+            <label><input class="rotorInput" ng-model="first"/></label>
+
         </div>
     </div>
     <div id="footer"></div>
