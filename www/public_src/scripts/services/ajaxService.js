@@ -2,8 +2,8 @@ angular.module('enigma')
     .service('ajaxService', function($http) {
 
             return {
-                getAppTitle : function() {
-                    return $http.get('/api/getData/title')
+                getEnigmaCipher : function(phrase) {
+                    return $http.get('/api/getCipher/' + phrase)
                                 .then(function(result){
                                     return result.data;
                                 });

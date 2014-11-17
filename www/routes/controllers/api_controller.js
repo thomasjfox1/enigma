@@ -2,13 +2,16 @@ var apiModel = require('../models/api_model');
 
 module.exports.controller = function(httpApp){
 
-    httpApp.get('/api/getData/:param', function(request, response){
+
+//change the name of /:param in order to pass more stuff in
+    httpApp.get('/api/getCipher/:param', function(request, response){
 
         var paramsObject = request.params.param;
 
         try{
             response.setHeader('Content-Type', 'application/json');
-            apiModel.getData(paramsObject, function(results){
+
+            apiModel.getCipher(paramsObject, function(results){
                 response.send(results);
             });
         }

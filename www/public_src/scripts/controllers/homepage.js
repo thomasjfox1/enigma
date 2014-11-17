@@ -1,21 +1,32 @@
 angular.module('enigma')
-    .controller('HomepageCtrl', function($scope, ajaxService, cipher) {
+    .controller('HomepageCtrl', function($scope, ajaxService) {
 
         $scope.phrase = "";
         $scope.result = [];
-        $scope.first = 0;
-        $scope.second = 0;
-        $scope.third = 0;
+
+        $scope.encrypt = function(){
+            ajaxService.getEnigmaCipher($scope.phrase).then(function(results){
+                $scope.result = results;
+            });
+        };
+
+
+        // $scope.first = 0;
+        // $scope.second = 0;
+        // $scope.third = 0;
+
+        /*
 
         // rotors for swapping and comparing
         //                  0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25
         alphabet =        ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 
-        rotorOne =                                            ['O','E','S','Q','A','C','J','M','R','I','U','T','Z','W','D','G','K','Y','B','F','X','P','V','L','H','N'];
-        rotorTwo =        ['B','T','G','F','O','I','A','R','P','J','Z','S','W','Q','K','E','V','X','D','M','H','L','Y','N','U','C'];
-        rotorThree =      ['K','C','N','V','H','R','U','L','F','M','T','I','B','X','Q','A','O','G','D','P','J','S','Z','Y','W','E'];
-        // rotorFour =    ['U','A','Q','J','E','G','V','F','M','I','Z','W','P','C','L','T','K','D','B','N','S','R','O','Y','H','X'];
-        reflectorPlate =  ['Q','R','L','A','U','D','O','W','J','E','G','B','H','X','M','Z','N','I','C','T','Y','F','P','V','K','S'];
+        rotorOne =        ['E','K','M','F','L','G','D','Q','V','Z','N','T','O','W','Y','H','X','U','S','P','A','I','B','R','C','J'];
+        rotorTwo =        ['A','J','D','K','S','I','R','U','X','B','L','H','W','T','M','C','Q','G','Z','N','P','Y','F','V','O','E'];
+        rotorThree =      ['B','D','F','H','J','L','C','P','R','T','X','V','Z','N','Y','E','I','W','G','A','K','M','U','S','Q','O'];
+        // rotorFour =    ['E','S','O','V','P','Z','J','A','Y','Q','U','I','R','H','X','L','N','F','T','G','K','D','C','M','W','B'];
+        // rotorFive =    ['V','Z','B','R','G','I','T','Y','U','P','S','D','N','H','L','X','A','W','M','J','Q','O','F','E','C','K'];
+        reflectorPlate =  ['Y','R','U','H','Q','S','L','D','P','X','N','G','O','K','M','I','E','B','F','Z','C','W','V','J','A','T'];
 
 
         // otherChars =  ",./?\"\';:!@#$%&0123456789";
@@ -36,14 +47,14 @@ angular.module('enigma')
                     console.log('second switch: ' + letter);
                     letter = switchLetter(letter, rotorThree);
                     console.log('third switch: ' + letter);
-                    // letter = reflector(letter);
-                    // console.log('reflector: ' + letter);
-                    // letter = switchLetter(letter, rotorThree);
-                    // console.log('fifth switch: ' + letter);
-                    // letter = switchLetter(letter, rotorTwo);
-                    // console.log('sixth switch: ' + letter);
-                    // letter = switchLetter(letter, rotorOne);
-                    // console.log('seventh switch: ' + letter);
+                    letter = reflector(letter);
+                    console.log('reflector: ' + letter);
+                    letter = switchLetter(letter, rotorThree);
+                    console.log('fifth switch: ' + letter);
+                    letter = switchLetter(letter, rotorTwo);
+                    console.log('sixth switch: ' + letter);
+                    letter = switchLetter(letter, rotorOne);
+                    console.log('seventh switch: ' + letter +"\n");
                     rotation();
                     encrypted[i] = letter;
                 }
@@ -53,11 +64,12 @@ angular.module('enigma')
 
         function switchLetter(letter, rotor){
             var index = compareAlpha(letter);
-            console.log('letter alpha index: ' + index);
-            var adjIndex = rotorIndex(rotor, index);
-            console.log('adjusted index: ' + adjIndex);
+            // console.log('letter alpha index: ' + index);
+            // var adjIndex = rotorIndex(rotor, index);
+            // console.log('adjusted index: ' + adjIndex);
             // console.log(rotor[adjIndex]);
-            return rotor[adjIndex];
+            return rotor[index];
+            // return rotor[adjIndex];
         }
 
         function reflector(letter){
@@ -69,7 +81,7 @@ angular.module('enigma')
         function rotorIndex(rotor, index) {
             var temp;
             if (rotor == rotorOne){
-                console.log('rotorone');
+                // console.log('rotorone');
                 temp = index - $scope.first;
                 // temp = $scope.first + index;
                 if (temp < 0) {
@@ -83,7 +95,7 @@ angular.module('enigma')
                 }
             }
             else if (rotor == rotorTwo){
-                console.log('rotortwo');
+                // console.log('rotortwo');
                 temp = index - $scope.second;
                 if (temp < 0) {
                     return temp + 26;
@@ -93,7 +105,7 @@ angular.module('enigma')
                 }
             }
             else if (rotor == rotorThree){
-                console.log('rotorthree');
+                // console.log('rotorthree');
                 temp = index - $scope.third;
                 if (temp < 0) {
                     return temp + 26;
@@ -229,5 +241,7 @@ angular.module('enigma')
             // temp = phraseEncode($scope.phrase);
             $scope.result = temp.join("");
         };
+
+*/
 
     });
