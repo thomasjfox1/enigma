@@ -4,14 +4,15 @@ module.exports.controller = function(httpApp){
 
 
 //change the name of /:param in order to pass more stuff in
-    httpApp.get('/api/getCipher/:param', function(request, response){
+    httpApp.get('/api/getCipher/:paramPhrase/:paramStart', function(request, response){
 
-        var paramsObject = request.params.param;
+        var paramPhraseObject = request.params.paramPhrase;
+        var paramStartObject = request.params.paramStart;
 
         try{
             response.setHeader('Content-Type', 'application/json');
 
-            apiModel.getCipher(paramsObject, function(results){
+            apiModel.getCipher(paramPhraseObject, paramStartObject, function(results){
                 response.send(results);
             });
         }

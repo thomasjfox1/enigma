@@ -1,8 +1,9 @@
 var enigmaJS = require('./enigma_machine.js');
 
-module.exports.getCipher = function(encodedParamsObject, callback){
+module.exports.getCipher = function(encodedParamPhraseObject, encodedParamStartObject, callback){
 
-    var paramsObject = decodeURI(encodedParamsObject);
+    var paramPhraseObject = decodeURI(encodedParamPhraseObject);
+    var paramStartObject = decodeURI(encodedParamStartObject);
 
         var rotorI        = new enigmaJS.Rotor('EKMFLGDQVZNTOWYHXUSPAIBRCJ', 'Q');
         var rotorIII      = new enigmaJS.Rotor('BDFHJLCPRTXVZNYEIWGAKMUSQO', 'V');
@@ -12,10 +13,12 @@ module.exports.getCipher = function(encodedParamsObject, callback){
         var etw           = new enigmaJS.Eintrittswalze('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
         var enigma = new enigmaJS.Enigma([rotorI, rotorIV, rotorIII], ukwB, steckerbrett, etw);
+        enigma.setPositions(paramStartObject.toUpperCase());
+        enigma.setRingSettings('AAA');
 
 
-    if(paramsObject !== ""){
-        callback(enigma.string(paramsObject));
+    if(paramPhraseObject !== ""){
+        callback(enigma.string(paramPhraseObject));
         // callback('hello');
     }
     else{

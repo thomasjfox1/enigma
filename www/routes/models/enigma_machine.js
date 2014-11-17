@@ -1,4 +1,3 @@
-
 var Enigma          = require('./enigma/enigma'),
     Rotor           = require('./enigma/rotor'),
     Umkehrwalze     = require('./enigma/umkehrwalze'),
