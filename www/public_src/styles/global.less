@@ -1,7 +1,18 @@
-*, *:before, *:after {
+html{
+  padding:0;
+  margin:0;
+  height: 100%;
+
+  }
+
+  *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+body{
+  height: 100%;
 }
 
 /* Small screens (default) */
@@ -48,8 +59,8 @@ h3{
 @media (min-width: 40rem) {
   .column {
     float: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    // padding-left: 1rem;
+    // padding-right: 1rem;
   }
 
   .column.full { width: 100%; }

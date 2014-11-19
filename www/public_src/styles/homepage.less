@@ -1,22 +1,54 @@
 .innerBox{
   text-align: center;
-  margin: 10px;
-  padding: 10px;
+  // margin: 10px;
+  padding: 5px;
   color: @inverseText;
 }
 
+#content{
+  // position: relative;
+  text-align: center;
+  height: 100%;
+}
+
 #topBox{
-  background-color: #123456;
+  background-color: #262F40;
+}
+
+#heading{
+  margin:0;
+  padding:10px;
 }
 
 #input{
-  width: 300px;
+  max-width: 300px;
+  min-width: 220px;
+}
+
+#submitButton{
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
 }
 
 #encryption{
   width: 100%;
-  height: 60px;
+  height: 100%;
+  min-height: 175px;
   padding: 10px;
+  word-wrap: break-word;
+  max-width: 500px;
+  margin-left:auto;
+  margin-right:auto;
+  // transition:height 10s; /* Animation time */
+  // -webkit-transition:height 10s; /* For Safari */
+}
+
+#phraseInput{
+  padding:10px;
+}
+
+#startPositions{
+  padding:10px;
 }
 
 .rotorInput{
@@ -25,4 +57,40 @@
   size: 120%;
   height: 40px;
   font-size: 100%;
+}
+
+#enigma-top {
+  max-width: 250px;
+  padding-top: 10px;
+}
+
+#information{
+  max-width: 800px;
+  text-align: center;
+  float: center;
+  margin-right: auto;
+  margin-left: auto;
+  word-wrap: break-word;
+  font-size: 80%;
+}
+
+#footer{
+  width:100%;
+  height:50px;
+  font-size: 80%;
+  // display: block;
+  // position: absolute;
+  bottom:0;
+  // left:0;
+  background:#D9D9D9;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+  color: #262F40;
+}
+
+a:hover{
+  color: #4F5F7C;
 }

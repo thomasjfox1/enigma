@@ -1,39 +1,48 @@
 <div class="outer">
     <div id="header"></div>
     <div id="content">
-        <div class="column full center">
-            <div class="innerBox" id="topBox">
-              <h3>The Enigma Machine</h3>
-            </div>
-        </div>
-        <div class="column full center">
-            <form ng-submit="encrypt()">
+      <div>
+          <div class="innerBox" id="topBox">
+            <img id="enigma-top" src="../media/images/enigma.png">
+            <h3 id="heading">The Enigma Machine</h3>
+            <h3 id="heading">SITE CONSTRUCTION IN PROGRESS</h3>
+          </div>
+      </div>
+      <div>
+          <form ng-submit="encrypt()">
+              <div id="phraseInput">
                 <input type="text" ng-model="phrase" id="input"/>
-                <input type="submit" id="submit" value="Encrypt" ng-click="show=true"/>
-                <div id="encryption">
-                  <pre ng-show="show">{{result}}</pre>
-                </div>
-            </form>
-            <!-- <p>{{third}} {{second}} {{first}}<p> -->
-            <div>
-              <label>Start Positions <input class="rotorInput" ng-model="third"/></label>
-              <label><input class="rotorInput" ng-model="second"/></label>
-              <label><input class="rotorInput" ng-model="first"/></label>
-            </div>
+                <input type="submit" id="submitButton" value="Encrypt" ng-click="show=true"/>
+              </div>
+              <div id="startPositions">
+                <label><input class="rotorInput" ng-model="third"/></label>
+                <label><input class="rotorInput" ng-model="second"/></label>
+                <label><input class="rotorInput" ng-model="first"/></label>
+              </div>
+              <div id="encryption">
+                <pre ng-show="show">{{result}}</pre>
+              </div>
+          </form>
+          <div id=information>
+            <p>The Enigma Machine is an electro-mechanical rotor cipher machine developed in Germany the early 1920s. They were for commercial and military usage.</p>
+          </div>
+          <!-- <p>{{third}} {{second}} {{first}}<p> -->
 
-            <!-- <div>
-              <label>Rotor Positions <input class="rotorInput" ng-model="third"/></label>
-              <label><input class="rotorInput" ng-model="second"/></label>
-              <label><input class="rotorInput" ng-model="first"/></label>
-            </div>
+          <!-- <div>
+            <label>Rotor Positions <input class="rotorInput" ng-model="third"/></label>
+            <label><input class="rotorInput" ng-model="second"/></label>
+            <label><input class="rotorInput" ng-model="first"/></label>
+          </div>
 
-            <div>
-              <label>Rotor Order <input class="rotorInput" ng-model="third"/></label>
-              <label><input class="rotorInput" ng-model="second"/></label>
-              <label><input class="rotorInput" ng-model="first"/></label>
-            </div> -->
+          <div>
+            <label>Rotor Order <input class="rotorInput" ng-model="third"/></label>
+            <label><input class="rotorInput" ng-model="second"/></label>
+            <label><input class="rotorInput" ng-model="first"/></label>
+          </div> -->
 
+        <div id="footer">
+          <p>Copyright 2014 Thomas J. Fox  |  <a href="mailto:thomasjfox1@gmail.com">Contact</a>  |  <a href="https://github.com/thomasjfox1/enigma">GitHub</a></p>
         </div>
+      </div>
     </div>
-    <div id="footer"></div>
 </div>
