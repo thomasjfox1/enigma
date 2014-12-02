@@ -10,6 +10,7 @@ module.exports.getCipher = function(encodedParamPhraseObject, encodedParamStartO
         var rotorIV       = new enigmaJS.Rotor('ESOVPZJAYQUIRHXLNFTGKDCMWB', 'J');
         var ukwB          = new enigmaJS.Umkehrwalze('YRUHQSLDPXNGOKMIEBFZCWVJAT');
         var steckerbrett  = new enigmaJS.Steckerbrett( 'AD CN ET FL GI JV KZ PU QY WX' );
+        // var steckerbrett  = new enigmaJS.Steckerbrett( 'ER PU QY WX' );
         var etw           = new enigmaJS.Eintrittswalze('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
         var enigma = new enigmaJS.Enigma([rotorI, rotorIV, rotorIII], ukwB, steckerbrett, etw);

@@ -7,7 +7,23 @@
     <link rel="stylesheet" href="styles/app.css">
 </head>
 <body>
+  <div id="page">
+    <div id="header">
+      <div id="headImage"></div>
+      <div id="nav">
+        <ul>
+          <li><a href="/#/">home</a></li>
+          <li><a href="/#/enigma">enigma</a></li>
+          <li><a href="/#/history">history</a></li>
+          <li><a href="/#/citations">citations</a></li>
+        </ul>
+      </div>
+    </div>
     <div ng-view id="ngView"></div>
     <script type="text/javascript" src="scripts/app.js"></script>
+    <div id="footer">
+      <p>Copyright 2014 Thomas J. Fox  |  <a href="mailto:thomasjfox1@gmail.com">Contact</a>  |  <a href="https://github.com/thomasjfox1/enigma">GitHub</a></p>
+    </div>
+  </div>
 </body>
 </html>
