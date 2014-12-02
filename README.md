@@ -4,6 +4,8 @@ This project is a website that will compute basic encryptions based on the WWII 
 
 The website is an AngularJS-NodeJS-Express server.
 
+[View Live Website](http://enigmamachine.herokuapp.com/)
+
 ### System Configs ###
 
 **Created and Tested With:**
