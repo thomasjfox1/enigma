@@ -13,7 +13,7 @@ angular.module('enigma', ['ngRoute'])
               templateUrl: 'views/pages/history.html',
               controller: 'HistoryCtrl'
             })
-            .when('/citations', {
+            .when('/references', {
               templateUrl: 'views/pages/citations.html',
               controller: 'CitationsCtrl'
             })
