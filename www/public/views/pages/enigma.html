@@ -17,7 +17,7 @@
     <form ng-submit="encrypt()">
       <div id="phraseInput">
         <input type="text" ng-model="phrase" id="input"/>
-        <input type="submit" id="submitButton" value="Encrypt" ng-click="show=true"/>
+        <input type="submit" id="submitButton" value="encrypt" ng-click="show=true"/>
       </div>
       <div id="startPositions">
         <label><input class="rotorInput" ng-model="third"/></label>
@@ -28,8 +28,11 @@
         <pre ng-show="show">{{result}}</pre>
       </div>
     </form>
-    <h3>how to use</h3>
-    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi.</p
+    <div id="enigmaInfo">
+      <h3>how to use</h3>
+      <div class="divider"></div>
+      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi.</p>
+    </div>
 
   </div>
 </div>
