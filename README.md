@@ -87,3 +87,4 @@ It is kept running using Monit, which will keep it running through errors and pr
 
 ###Credits:###
 * Original server built by [Nathanael Marquardt](https://github.com/NathanMarq/angular-node-server).
+* Enigma code adapted from [Nen Elsen](https://github.com/benelsen/enigma).
