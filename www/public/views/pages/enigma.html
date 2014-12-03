@@ -13,16 +13,16 @@
 
 <div class="container">
   <div class="content">
-    <h2>the enigma machine</h2>
+    <h2>The Enigma Machine</h2>
     <form ng-submit="encrypt()">
       <div id="phraseInput">
         <input type="text" ng-model="phrase" id="input"/>
-        <input type="submit" id="submitButton" value="encrypt" ng-click="show=true"/>
+        <input type="submit" id="submitButton" value="ENCRYPT" ng-click="show=true"/>
       </div>
       <div id="startPositions">
-        <label><input class="rotorInput" ng-model="third"/></label>
-        <label><input class="rotorInput" ng-model="second"/></label>
-        <label><input class="rotorInput" ng-model="first"/></label>
+        <label><input type="text" class="rotorInput" maxlength="1" ng-model="third"/></label>
+        <label><input type="text" class="rotorInput" maxlength="1" ng-model="second"/></label>
+        <label><input type="text" class="rotorInput" maxlength="1" ng-model="first"/></label>
       </div>
       <div id="encryption">
         <pre ng-show="show">{{result}}</pre>

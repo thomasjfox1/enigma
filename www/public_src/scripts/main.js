@@ -9,7 +9,7 @@ angular.module('enigma', ['ngRoute'])
               templateUrl: 'views/pages/enigma.html',
               controller: 'EnigmaCtrl'
             })
-            .when('/history', {
+            .when('/about', {
               templateUrl: 'views/pages/history.html',
               controller: 'HistoryCtrl'
             })
